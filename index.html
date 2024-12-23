@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleção de Bancos</title>
+    <title>Conversor de Moedas - Página Inicial</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Selecione o Banco</h1>
-        <p>Escolha qual banco deseja usar para simular as taxas de conversão.</p>
-        <div class="button-group">
-            <a href="nubank.html" class="btn">Acessar Nubank</a>
-            <a href="inter.html" class="btn">Acessar Inter</a>
+        <h1>Conversor de Moedas</h1>
+        <div class="dropdown">
+            <label for="bankSelector">Selecione o banco:</label>
+            <select id="bankSelector" onchange="redirectToBank()">
+                <option value="" selected>Escolha uma opção</option>
+                <option value="nubank.html">Nubank</option>
+                <option value="inter.html">Inter</option>
+            </select>
+        </div>
+        <div class="nav-buttons">
+            <a href="#" class="btn-home">Home</a>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
