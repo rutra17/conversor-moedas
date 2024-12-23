@@ -1,32 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversão - Inter</title>
+    <title>Conversor - Inter</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>Conversão - Banco Inter</h1>
-        <label for="currencySelector">Selecione a moeda:</label>
-        <select id="currencySelector">
-            <option value="USD">Dólar (USD)</option>
-            <option value="EUR">Euro (EUR)</option>
-            <option value="GBP">Libra Esterlina (GBP)</option>
-            <option value="JPY">Iene (JPY)</option>
-            <option value="AUD">Dólar Australiano (AUD)</option>
-            <option value="CAD">Dólar Canadense (CAD)</option>
-            <option value="CHF">Franco Suíço (CHF)</option>
-        </select>
-        <input type="number" id="dollarInput" placeholder="Valor da compra" min="1" onkeypress="handleKeyPress(event)">
+        <h1>Inter</h1>
+        <div class="card">
+            <label for="currencySelector">Selecione a moeda:</label>
+            <select id="currencySelector">
+                <option value="USD" selected>Dólar (USD)</option>
+                <option value="EUR">Euro (EUR)</option>
+                <option value="GBP">Libra Esterlina (GBP)</option>
+                <option value="CAD">Dólar Canadense (CAD)</option>
+                <option value="AUD">Dólar Australiano (AUD)</option>
+                <option value="JPY">Iene (JPY)</option>
+                <option value="CHF">Franco Suíço (CHF)</option>
+            </select>
+            <br><br>
+            <label for="dollarInput">Valor da compra:</label>
+            <input type="number" id="dollarInput" placeholder="Digite o valor em USD" min="1" onkeypress="handleKeyPress(event)" step="0.01">
+            <button class="btn-calculate" onclick="calculateTotal()">Calcular</button>
+        </div>
         <div class="value-display" id="valueDisplay">R$</div>
-        <button onclick="calculateTotal()">Calcular</button>
-
-        <div class="buttons">
-            <a href="index.html" class="btn">Voltar ao início</a>
+        <div class="nav-buttons">
+            <a href="index.html" class="btn-back">Voltar ao início</a>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
