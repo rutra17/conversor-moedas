@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Dólar - Nubank</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversão de Dólar - Nubank</h1>
+        <input type="number" id="dollarInput" placeholder="Valor da compra em USD" min="1" onkeypress="handleKeyPress(event)">
+        <div class="value-display" id="valueDisplay">R$</div>
+        <button onclick="calculateTotal()">Calcular</button>
+        
+        <div class="buttons">
+            <a href="index.html" class="btn">Voltar ao início</a>
+        </div>
+    </div>
+</body>
+</html>
